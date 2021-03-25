@@ -1,16 +1,21 @@
 package ua.donnu.ta;
 
+import java.util.Scanner;
+
 public class Ellipsoid {
     public static void main(String[] args) {
-        double a = 5;
-        double b = 2;
+        Scanner in=new Scanner(System.in);
+        System.out.println("Input number 1:");
+        float n_1=in.nextFloat();
+        System.out.println("Input number 2:");
+        float n_2=in.nextFloat();
 
-        double s = a * b * Math.PI;
+        double e = n_1 * n_2 * Math.PI;
 
-        System.out.println(s);
+        System.out.println(e);
 
-        double p = 4 * (Math.PI * a * b + (a - b)) / a + b;
+        double k = 4 * (Math.PI * n_1 * n_2 + (n_1 - n_2)) / n_1 + n_2;
 
-        System.out.println(p);
+        System.out.println(k);
     }
 }
